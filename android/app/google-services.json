@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "30448934988",
+    "project_id": "driptock-dp",
+    "storage_bucket": "driptock-dp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30448934988:android:c9d3bb04222e68e80394e9",
+        "android_client_info": {
+          "package_name": "com.driptock.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDufGOvBV0gwdu5hJmu5hqA6s5CIPgXsuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
