@@ -4,6 +4,7 @@ import 'package:drip_tok/constants/app_colors.dart';
 import 'package:drip_tok/controller/user_controller.dart';
 import 'package:drip_tok/controller/user_profile_Controller.dart';
 import 'package:drip_tok/model/user_profile.dart';
+import 'package:drip_tok/screens/ward_robe.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -200,7 +201,16 @@ class _UsersState extends State<Users> {
                               : ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
                                   child: GestureDetector(
-                                      onTap: () {},
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => MyWardRobe(
+                                              userId: userProfile.userId!,
+                                            ),
+                                          ),
+                                        );
+                                      },
                                       child: Container(
                                         width: double.infinity,
                                         decoration: BoxDecoration(

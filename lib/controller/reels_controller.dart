@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'dart:math' hide log;
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:drip_tok/bottom_navigation/home_screen.dart';
 import 'package:drip_tok/constants/bottom_navigation.dart';
 import 'package:drip_tok/controller/my_drips_controllere.dart';
 import 'package:drip_tok/controller/user_profile_Controller.dart';
@@ -39,7 +40,11 @@ class ReelsController extends GetxController {
   // VideoPlayerController? videoController;
 
   setVideoControllerIndex(int val) {
+    log('videoControllerIndex: $val');
     videoControllerIndex = val;
+    if (videoControllerIndex == videoList.length - 1) {
+      fetchAllVideos();
+    }
   }
 
   Future<VideoPlayerController?> intializeVideoController(
@@ -82,12 +87,11 @@ class ReelsController extends GetxController {
             // .catchError((error) {
             //   update();
             // })
-            ..addListener(() {
-              update();
-            })
+            ..addListener(() {})
             ..setLooping(true)
             ..pause();
     }
+    update();
 
     return null;
   }

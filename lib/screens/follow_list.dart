@@ -265,10 +265,11 @@ class _FollowListState extends State<FollowList> {
                                               SizedBox(
                                                 height: height * 0.007,
                                               ),
-                                              !userProfileController
-                                                      .profileModel
-                                                      .value
-                                                      .followings!
+                                              !(userProfileController
+                                                              .profileModel
+                                                              .value
+                                                              .followings ??
+                                                          [])
                                                       .contains(
                                                           userProfile.userId)
                                                   ? SizedBox(
